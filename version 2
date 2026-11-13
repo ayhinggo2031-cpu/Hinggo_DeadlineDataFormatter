@@ -1,0 +1,24 @@
+#version 2 - added date formatting
+from datetime import datetime
+
+#get user import
+event_title = input("Enter event title: ")
+year = int(input("Enter year: "))
+month = int(input("Enter month: "))
+day = int(input("Enter day: "))
+
+#create date object
+event_date = datetime(year, month, day)
+
+#month name and weekday name
+month_name = event_date.strftime("%B")
+weekday_name = event_date.strftime("%A")
+
+#display formatted output
+print("/nFormatted Output: ")
+print(f"Event: {event_title.upper()}")
+print(f"Date: {month_name} {day}, {year}")
+print(f"Year: {year}")
+print(f"Month: {month_name}")
+print(f"Day: {day}")
+print(f"Weekday: {weekday_name}")
